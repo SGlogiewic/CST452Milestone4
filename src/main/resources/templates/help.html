@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="layouts/defaultTemplate">
+
+
+<head>
+<style>
+	* {
+		font-family: Arial;
+	}
+	h2 {
+		color:blue;
+	}
+	p {
+		font-style : italic;
+	}
+	table, th, td {
+  		border: 1px solid black; 
+  		border-collapse: collapse;
+		padding:2px;
+		} 
+</style>
+
+
+</head>
+	<body>
+	<div layout:fragment="content" class="container-xl">
+		<font size="6">Need help finding a web page?</font>
+		<font size="4">
+		<div style = "position:relative; left:0px; top:2px;">
+         Below is a diagram showing the layout of all of the website's web pages. For ease of use, the main pages of the website are 
+         linked on the header and footer of each web page. 
+      	</div>
+		</font>
+		<div class="imgcontainer">
+		  	<img th:src="@{/img/SitemapPart1.drawio.png}" alt="Sitemap" class="sitemap" width="1100" height="500"/>
+		</div>
+	</div>
+	</body>
+</html>

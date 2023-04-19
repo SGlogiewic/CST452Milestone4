@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="layouts/defaultTemplate">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+<style>
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 15px;
+}
+
+.collapsible:hover {
+  background-color: #555;
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  text-align: left;
+  background-color: #f1f1f1;
+}
+
+	
+	* {
+		font-family: Arial;
+	}
+	h1{
+		text-align:left;
+		font-size:larger;
+	}
+	h2 {
+		text-align:left;
+		font-size:large;
+		color:gray;
+	}
+	p {
+		font-style : italic;
+	}
+	table, th, td {
+  		border: 1px solid black; 
+  		border-collapse: collapse;
+		padding:2px;
+		} 
+</style>
+
+
+</head>
+	<body>
+	<div layout:fragment="content" class="container-xl">
+		<h1>Aloe Health's Medical Services</h1>
+		<h2><br>Below are medications available at Aloe Health's pharmacy to patients with a prescription from a prescribing doctor. Aloe Health's pharmacy serves prescriptions prescribed by both Aloe Health doctors and doctors from other clinics and doctor's offices as well.
+		<br><br>Prices for prescriptions varies as the price is ependant on both market value and the medical insuance of the prescribed patient.
+		</h2>
+		<button class="collapsible" >Medications</button>
+    	<div class="content">
+      		<div class="imgcontainer">
+		  		<img th:src="@{/img/stockPhoto19.jpg}" align="left" alt="Medicine1" class="medicine1" width="270" height="175"/>
+				<p style="margin-left:400px;">Extra Strength Ibuprofen<br><br> Uses:<br> To cure moderate to severe pains <br> Control sever fevers<br> Ease joint pain and inflammation<br> Eases strains and pains (typically those cased by sports injuries)<br><br></p>
+			</div>
+			<div class="imgcontainer">
+		  		<img th:src="@{/img/stockPhoto20.jpg}" align="left" alt="Medicine2" class="medicine2" width="270" height="175"/>
+				<p style="margin-left:400px;">Inhaler<br><br> Uses:<br> To treat patients with Asthma<br> To treat Chronic Obstructive Pulmonary Disease (COPD)<br><br><br></p>
+			</div>
+			<div class="imgcontainer">
+		  		<img th:src="@{/img/stockPhoto21.jpg}" align="left" alt="Medicine3" class="medicine3" width="270" height="175"/>
+				<p style="margin-left:400px;">Extra Strength Allergy Medication<br><br> Uses: <br> Itchy eyes<br>Hives<br>Sneezing<br>Other severe symptoms of allergies<br></p>
+			</div>
+		</div>
+		<h2><br>Aside from emergency surgeries that need to be performed on short notice, Aloe Health's doctors and surgeons offer several non-emergency surgeries that can provide patients with a better quality of life.</h2>
+		<button class="collapsible" >Surgeries</button>
+    	<div class="content">
+      		<div class="imgcontainer">
+		  		<img th:src="@{/img/stockPhoto22.jpg}" align="left" alt="Surgery1" class="surgery1" width="270" height="175"/>
+				<p style="margin-left:400px;">Spinal Fusion<br><br> Spinal fusion is a surgery to prevent spinal pain in patients. The procedure fuses two or more vertebrae in the spine to any movement between them that may be causing pain. <br><br> Estimated cost: $39,000 - $50,000<br><br></p>
+			</div>
+			<div class="imgcontainer">
+		  		<img th:src="@{/img/stockPhoto23.jpg}" align="left" alt="Surgery2" class="surgery2" width="270" height="175"/>
+				<p style="margin-left:400px;">Hip Replacement Surgery<br><br> Hip replacement surgery replaces the hip joint with a prosthetic implant. Price varies widely for hip replacements, as either the enite hip joint can be replaced, or only part of the hip joint can be replaced. <br><br> Estimated cost: $20,000 - $50,000<br></p>
+			</div>
+			<div class="imgcontainer">
+		  		<img th:src="@{/img/stockPhoto24.jpg}" align="left" alt="Surgery3" class="surgery3" width="270" height="175"/>
+				<p style="margin-left:400px;">Cataract Surgery (A.K.A. Lens Replacement Surgery)<br><br> Cataract surgery is a surgery where the natural lens of the eyeball is removed, typically due to the development of cataract on the lens of the eyeball. The lens is then replaced with an articial eyeball lens. <br><br> Estimated cost: $3,500 - $6,000<br></p>
+			</div>
+		</div>
+		<h2><br>Sometimes pain cannot be treated with medication and treatment from your primary care physician. While mental illnesses and mental pain are not physical, imbalances in the brain can cause a multitude of issues throughout the body which is why it is important that action is taken to remedy, or at the very least control, mental issues before they manifest into physical illnesses.
+		<br><br> Therapy costs vary significantly depending on the therapist and the amount of appointments the patient requests. Please consult with a therapist about pricing before scheduling an appointment. </h2>
+		<button class="collapsible" >Therapy Treatments and Consultations</button>
+    	<div class="content">
+      		<div class="imgcontainer">
+		  		<img th:src="@{/img/stockPhoto25.jpg}" align="left" alt="Therapy1" class="therapy1" width="270" height="175"/>
+				<p style="margin-left:400px;">Behavioral Therapy<br><br> Behavioral therapy is a an umbrella term for similar therapies that seeks to identify and help change destructive or problematic behaviors in the patient. <br><br> This therapy is typically used in patients with: depression, anxiety, panic disorders, anger mangement issues<br></p>
+			</div>
+			<div class="imgcontainer">
+		  		<img th:src="@{/img/stockPhoto26.jpg}" align="left" alt="Therapy2" class="therapy2" width="270" height="175"/>
+				<p style="margin-left:400px;">Cognitive Therapy<br><br> Cognitive therapy is a type of therapy that is emotionally-driven and goal-oriented.<br><br> This method of therapy is most often used to treat patients dealing with extreme grief, loss, or stress. Patients with depression or anxiety may also benefit form cognitive therapy. <br><br></p>
+			</div>
+			<div class="imgcontainer">
+		  		<img th:src="@{/img/stockPhoto27.jpg}" align="left" alt="Therapy3" class="therapy3" width="270" height="175"/>
+				<p style="margin-left:400px;">Family Therapy<br><br> Family therapy is a type of psychological counseling (psychotherapy). <br><br> Family therapy is most often used to help family members improve communication and resolve conflicts. It is also commonly used to help abused children. <br><br></p>
+			</div>
+		</div>
+		<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+<br><br><br>
+	</div>
+	</body>
+</html>

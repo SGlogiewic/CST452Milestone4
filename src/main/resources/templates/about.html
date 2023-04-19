@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="layouts/defaultTemplate">
+
+
+<head>
+<style>
+	* {
+		font-family: Arial;
+	}
+	h2 {
+		color:blue;
+	}
+	p {
+		font-style : italic;
+	}
+	table, th, td {
+  		border: 1px solid black; 
+  		border-collapse: collapse;
+		padding:2px;
+		} 
+</style>
+
+
+</head>
+	<body>
+	<div layout:fragment="content" class="container-xl">
+		<font size="6">Our Mission Statement</font>
+      	<div class="imgcontainer">
+		  	<img th:src="@{/img/stockPhoto1.jpg}" align="left" alt="photo1" class="photo1" width="500" height="400"/>
+		  	<p style="margin-left:400px;">
+		  	<br><br><br>At Aloe Health, we are committed to providing exceptional healthcare in all<br> 
+         aspects of your life. At our medical facilities we have doctors available <br>
+         for regular checkups, pharmacists available to provide prescribed medications,<br> 
+         ER staff to handle any medical emergencies, and experienced surgeons that <br>
+         perform surgical operations with your care and safety in mind.
+         <br><br><br>
+         For more information about the medical services, surgeries, and medications<br> 
+         available at Aloe Health please visit the 'Medical Services' page in the website's<br>
+          navigation bar. If you wish to learn more about Aloe Health's trained professionals,<br>
+          select the 'Our Medical Staff' page in the website's header.
+          <br><br><br>
+		  	</p>
+		</div>
+	</div>
+	</body>
+</html>

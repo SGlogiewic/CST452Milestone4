@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="layouts/defaultTemplate">
+
+
+<head>
+<style>
+	* {
+		font-family: Arial;
+	}
+	h2 {
+		color:blue;
+	}
+	p {
+		font-style : italic;
+	}
+	table, th, td {
+  		border: 1px solid black; 
+  		border-collapse: collapse;
+		padding:2px;
+		} 
+</style>
+
+
+</head>
+	<body>
+	<div layout:fragment="content" class="container-xl">
+		<h1 th:text="${title}"></h1> 
+	</div>
+	</body>
+</html>
