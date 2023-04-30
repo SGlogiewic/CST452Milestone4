@@ -1,31 +1,40 @@
 package com.gcu.model;
 
-public class OrderModel 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.relational.core.mapping.Column;
+import org.springframework.data.relational.core.mapping.Table;
+
+@Table("ORDERS")
+public class AloeEntity 
 {
-	Long id = 0L;
-	String orderNo = "";
-	String productName = "";
-	float price = 0;
-	int quantity = 0;
+	@Id
+	@Column("ID")
+	Long id;
 	
-	public OrderModel(Long id, String orderNo, String productName, float price, int quantity) 
+	@Column("ORDER_NUMBER")
+	String orderNo;
+	
+	@Column("PRODUCT_NAME")
+	String productName;
+	
+	@Column("PRICE")
+	float price;
+	
+	@Column("QTY")
+	int quantity;
+	
+	public AloeEntity() 
+	{
+		
+	}
+	
+	public AloeEntity(Long id, String orderNo, String productName, float price, int quantity) 
 	{
 		this.id = id;
 		this.orderNo = orderNo;
 		this.productName = productName;
 		this.price = price;
 		this.quantity = quantity;
-	}
-	
-	public OrderModel() 
-	{
-		
-	}
-	
-	@Override
-	public String toString() 
-	{
-		return "OrderModel [id=" + id + ", orderNo=" + orderNo + ", productName=" + productName + ", price=" + price + ", quantity=" + quantity + "]";
 	}
 	
 	public long getId() 

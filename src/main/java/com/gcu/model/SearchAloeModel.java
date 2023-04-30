@@ -1,6 +1,6 @@
 package com.gcu.model;
 
-public class SearchOrdersModel 
+public class SearchAloeModel 
 {
 	private String searchTerm;
 

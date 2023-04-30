@@ -1,48 +1,99 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="layouts/defaultTemplate">
 
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <head>
 <style>
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 15px;
+}
+
+.collapsible:hover {
+  background-color: #555;
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  text-align: left;
+  background-color: #f1f1f1;
+}
 	* {
 		font-family: Arial;
 	}
+	h1{
+		text-align:left;
+		font-size:xx-large;
+	}
 	h2 {
-		color:blue;
+		text-align:left;
+		font-size: large;
+		color:gray;
 	}
 	p {
 		font-style : italic;
 	}
-	table, th, td {
-  		border: 1px solid black; 
-  		border-collapse: collapse;
-		padding:2px;
-		} 
+	
 </style>
 
 
 </head>
 	<body>
 	<div layout:fragment="content" class="container-xl">
-		<font size="6">Our Mission Statement</font>
-		<font size="4">
-		<div style = "position:absolute; left:20px; top:100px;">
-         At Aloe Health, we are committed to providing exceptional healthcare in all<br> 
-         aspects of your life. At our medical facilities we have doctors available <br>
-         for regular checkups, pharmacists available to provide prescribed medications,<br> 
-         ER staff to handle any medical emergencies, and experienced surgeons that <br>
-         perform surgical operations with your care and safety in mind.
-         <br>
-         <br>
-         <br>
-         For more information about the medical services, surgeries, and medications<br> 
-         available at Aloe Health please visit the 'Medical Services' page in the website's<br>
-          navigation bar. If you wish to learn more about Aloe Health's trained professionals,<br>
-          select the 'Our Medical Staff' page in the website's header.
-         
-      	</div>
-      	<div class="imgcontainer" style = "position:relative; left:300px; top:00px;">
-		  	<img th:src="@{/img/stockPhoto1.jpg}" alt="photo1" class="photo1" width="500" height="400"/>
+		<h1 size="5">Doctor's offices<br></h1>
+      	
+      	<h2 size="2">Below are the offices of doctors who are general practitioners at Aloe Health. Select any of the medical offices below to view information regarding the office and information on how to schedule an appointment at the selected medical office. </h2>
+      	<button class="collapsible" >Anne's Pediatric Care</button>
+    <div class="content">
+      	<img th:src="@{/img/stockPhoto14.jpg}" align="left" alt="Doctor1" class="doctor1" width="270" height="175"/>
+		<p style="margin-left:400px;">Dr. Anne Doctor of Anne's Pediatric is a general doctor that provides excellent and quality pediatric care.<br> <br> To schedule an appointment at Anne's Pediatric Care call the number below: <br> Phone number: 111-111-1111<br> Or contact the email below <br> Email:annedoctormd@aloehealth.com<br><br><br></p>
+	</div>
+		<button class="collapsible">Smith Healthcare</button>
+	<div class="content">
+		<img th:src="@{/img/stockPhoto15.jpg}" align="left" alt="Doctor2" class="doctor2" width="270" height="175"/>
+		<p style="margin-left:400px;">Smith Healthcare is a medical office run by the Smith family and has been providing excellent medical care for three generations. Dr. Tom Smith is experienced in all aspects of general medicine and has moved his family's long running office to Aloe Health because he recognizes the world-class medical care that Aloe Health's medical facilities are able to provide.<br> <br> To schedule an appointment at Smith Healthcare call the number below: <br> Phone number: 222-222-2222<br> Or contact the email address below: <br> Email:drtomsmithmd@aloehealth.com<br><br><br></p>
+	</div>
+		<button class="collapsible">Aloe Specialty Medical Care</button>
+	<div class="content">
+		<img th:src="@{/img/stockPhoto16.jpg}" align="left" alt="Doctor3" class="doctor3" width="270" height="175"/>
+		<p style="margin-left:400px;">Dr. Sean Mckenzie has 30 years of experiencing both practicing general medicine and looking after patients with chronic conditions. He has decided to partner with Aloe Health and use his expertise to provide award-winning medical care to Aloe Health's patients.<br> <br> To schedule an appointment at Aloe Specialty Medical Care please call the number below: <br> Phone number: 333-333-3333<br> Or contact the email address below:<br> Email:drseanmckenzie@aloehealth.com<br><br><br></p>
+	</div>
+		
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+      	
+      	<div class="imgcontainer" style = "position:relative; left:380px; top:00px;">
+		  	<img th:src="@{/img/stockPhoto39.jpg}" alt="photo1" class="photo1" width="350" height="270"/>
+		</div>
+		<div class="imgcontainer" style = "position:relative; left:0px; top:-270px;">
+		  	<img th:src="@{/img/stockPhoto40.jpg}" alt="photo1" class="photo1" width="350" height="270"/>
+		</div>
+		<div class="imgcontainer" style = "position:relative; left:-380px; top:-540px;">
+		  	<img th:src="@{/img/stockPhoto41.jpg}" alt="photo1" class="photo1" width="350" height="270"/>
 		</div>
 		</font>
 	</div>

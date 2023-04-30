@@ -12,6 +12,7 @@
 	}
 	p {
 		font-style : italic;
+		font-size:xx-large;
 	}
 	table, th, td {
   		border: 1px solid black; 
@@ -24,7 +25,13 @@
 </head>
 	<body>
 	<div layout:fragment="content" class="container-xl">
-		<h1 th:text="${title}"></h1> 
+		<font size="6">This page is unavailable</font>
+      	<div class="imgcontainer">
+		  	<img th:src="@{/img/stockPhoto38.jpg}" align="left" alt="photo1" class="photo1" width="500" height="400"/>
+		  	<p style="margin-left:400px;">
+		  	<br><br><br><br>This page is currently under construction<br><br><br><br>
+		  	</p>
+		</div>
 	</div>
 	</body>
 </html>
