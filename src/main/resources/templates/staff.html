@@ -1,49 +1,18 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="layouts/defaultTemplate">
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <head>
 <style>
-.collapsible {
-  background-color: #777;
-  color: white;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: center;
-  outline: none;
-  font-size: 15px;
-}
-
-.collapsible:hover {
-  background-color: #555;
-}
-
-.content {
-  padding: 0 18px;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
-  text-align: left;
-  background-color: #f1f1f1;
-}
-
-	
 	* {
 		font-family: Arial;
 	}
-	h1{
-		text-align:left;
-		font-size:xx-large;
-	}
 	h2 {
-		text-align:left;
-		font-size:large;
-		color:gray;
+		color:blue;
 	}
 	p {
 		font-style : italic;
+		font-size:xx-large;
 	}
 	table, th, td {
   		border: 1px solid black; 
@@ -56,110 +25,13 @@
 </head>
 	<body>
 	<div layout:fragment="content" class="container-xl">
-		<h1>Aloe Health's Medical Staff</h1>
-		<h2><br>At Aloe Health we believe that building trust is essential to providing quality care. In order to build trust with our patients, all of Aloe Health's medical professionals are listed on this web page along with their credenetials.  
-		<br><br> Additionally, the contact information of all of Aloe Health's medical professionals is available on this web page. Aloe Health's' doctors, surgeons, and pharmacists can be contacted with any inquiries regarding any of the medical services they provide.<br><br>
-		</h2>
-		<button class="collapsible" >Doctors</button>
-    	<div class="content">
-      		<div class="imgcontainer">
-		  		<img th:src="@{/img/stockPhoto14.jpg}" align="left" alt="Doctor1" class="doctor1" width="270" height="175"/>
-				<p style="margin-left:400px;">Dr. Anne Doctor<br> Doctor of Medicine(M.D.) <br> Alma Mater: Harvard Medical School <br> Phone number: 111-111-1111<br> Email:annedoctormd@aloehealth.com<br><br><br></p>
-			</div>
-			<div class="imgcontainer">
-		  		<img th:src="@{/img/stockPhoto15.jpg}" align="left" alt="Doctor2" class="doctor2" width="270" height="175"/>
-				<p style="margin-left:400px;">Dr. Tom Smith<br> Doctor of Medicine(M.D.) <br> Alma Mater: Medical College of Wisconsin <br> Phone number: 222-222-2222<br> Email:drtomsmithmd@aloehealth.com<br><br><br></p>
-			</div>
-			<div class="imgcontainer">
-		  		<img th:src="@{/img/stockPhoto16.jpg}" align="left" alt="Doctor3" class="doctor3" width="270" height="175"/>
-				<p style="margin-left:400px;">Dr. Sean Mckenzie<br> Doctor of Medicine(M.D.) <br> Alma Mater: University of California San Diego School of Medicine <br> Phone number: 333-333-3333<br> Email:drseanmckenzie@aloehealth.com<br><br><br></p>
-			</div>
+		<font size="6">This page is unavailable</font>
+      	<div class="imgcontainer">
+		  	<img th:src="@{/img/stockPhoto38.jpg}" align="left" alt="photo1" class="photo1" width="500" height="400"/>
+		  	<p style="margin-left:400px;">
+		  	<br><br><br><br>This page is currently under construction<br><br><br><br>
+		  	</p>
 		</div>
-		<button class="collapsible" >Surgeons</button>
-    	<div class="content">
-      		<div class="imgcontainer">
-		  		<img th:src="@{/img/stockPhoto8.jpg}" align="left" alt="Surgeon1" class="surgeon1" width="270" height="175"/>
-				<p style="margin-left:400px;">Dr. Ricky Rogers<br> Doctor of Medicine(M.D.) <br> Alma Mater: Harvard Medical School <br> Phone number: 444-444-4444<br> Email:drrickyrogersmd@aloehealth.com<br><br><br></p>
-			</div>
-			<div class="imgcontainer">
-		  		<img th:src="@{/img/stockPhoto9.jpg}" align="left" alt="Surgeon2" class="surgeon2" width="270" height="175"/>
-				<p style="margin-left:400px;">Dr. Lisa Carr<br> Doctor of Medicine(M.D.) <br> Alma Mater: Medical College of Wisconsin <br> Phone number: 555-555-5555<br> Email:drlisacarrmd@aloehealth.com<br><br><br></p>
-			</div>
-			<div class="imgcontainer">
-		  		<img th:src="@{/img/stockPhoto10.jpg}" align="left" alt="Surgeon3" class="surgeon3" width="270" height="175"/>
-				<p style="margin-left:400px;">Dr. Farrah Jackman<br> Doctor of Medicine(M.D.) <br> Alma Mater: University of California San Diego School of Medicine <br> Phone number: 666-666-6666<br> Email:drfarrahjackmanmd@aloehealth.com<br><br><br></p>
-			</div>
-		</div>
-		<button class="collapsible" >Pharmacists</button>
-    	<div class="content">
-      		<div class="imgcontainer">
-		  		<img th:src="@{/img/stockPhoto11.jpg}" align="left" alt="Pharmacist1" class="pharmacist1" width="270" height="175"/>
-				<p style="margin-left:400px;">Dr. Tom Blackwall<br> BS in Pharmacology and Toxicology <br> Alma Mater: Arizona State University <br> Phone number: 777-777-7777<br> Email:tomblackwallpharmacy@aloehealth.com<br><br><br></p>
-			</div>
-			<div class="imgcontainer">
-		  		<img th:src="@{/img/stockPhoto12.jpg}" align="left" alt="Pharmacist2" class="pharmacist2" width="270" height="175"/>
-				<p style="margin-left:400px;">Dr. Dorian Pavus<br> BS in Pharmacology and Toxicology<br> Alma Mater: University of California, Davis <br> Phone number: 888-888-888<br> Email:dorainpavuspharmacy@aloehealth.com<br><br><br></p>
-			</div>
-			<div class="imgcontainer">
-		  		<img th:src="@{/img/stockPhoto13.jpg}" align="left" alt="Pharmacist3" class="pharmacist3" width="270" height="175"/>
-				<p style="margin-left:400px;">Dr. Lelianna Barnes <br> BS in Pharmacology and Toxicology <br> Alma Mater: University of California San Diego School of Medicine <br> Phone number: 999-999-9999<br> Email:leliannabarnespharmacy@aloehealth.com<br><br><br></p>
-			</div>
-		</div>
-		<button class="collapsible" >Therapists</button>
-    	<div class="content">
-      		<div class="imgcontainer">
-		  		<img th:src="@{/img/stockPhoto28.jpg}" align="left" alt="Therapist1" class="therapist1" width="270" height="175"/>
-				<p style="margin-left:400px;">Allister Amell<br> BS in Psychology <br> Alma Mater: Grand Canyon University <br> Phone number: 000-000-0001<br> Email:allister.amell@aloehealth.com<br><br><br></p>
-			</div>
-			<div class="imgcontainer">
-		  		<img th:src="@{/img/stockPhoto29.jpg}" align="left" alt="Therapist2" class="therapist2" width="270" height="175"/>
-				<p style="margin-left:400px;">Cassandra Pent<br> BS in Psychology<br> Alma Mater: Arizona State University <br> Phone number: 000-000-0002<br> Email:cassandra.pent@aloehealth.com<br><br><br></p>
-			</div>
-			<div class="imgcontainer">
-		  		<img th:src="@{/img/stockPhoto30.jpg}" align="left" alt="Therapist3" class="therapist3" width="270" height="175"/>
-				<p style="margin-left:400px;">Isabella Cole<br> BA in Social Work; Masters in Social Work <br> Alma Mater: University of California San Diego <br> Phone number: 000-000-0003<br> Email:isabella.cole@aloehealth.com<br><br><br></p>
-			</div>
-		</div>
-		<button class="collapsible" >Nurses</button>
-    	<div class="content">
-      		<div class="imgcontainer">
-		  		<img th:src="@{/img/stockPhoto31.jpg}" align="left" alt="Therapist1" class="therapist1" width="270" height="175"/>
-				<p style="margin-left:400px;">Cynthia Carter<br> Registered Nurse <br> Alma Mater: Grand Canyon University <br><br> Email:cynthia.carter@aloehealth.com<br><br><br></p>
-			</div>
-			<div class="imgcontainer">
-		  		<img th:src="@{/img/stockPhoto32.jpg}" align="left" alt="Therapist2" class="therapist2" width="270" height="175"/>
-				<p style="margin-left:400px;">Gary Oak<br> Registered Nurse<br> Alma Mater: Grand Canyon University <br><br> Email:gary.oak@aloehealth.com<br><br><br></p>
-			</div>
-			<div class="imgcontainer">
-		  		<img th:src="@{/img/stockPhoto33.jpg}" align="left" alt="Therapist3" class="therapist3" width="270" height="175"/>
-				<p style="margin-left:400px;">Leon Logan<br> Registered Nurse <br> Alma Mater: Grand Canyon University <br><br> Email:leon.logan@aloehealth.com<br><br><br></p>
-			</div>
-			<div class="imgcontainer">
-		  		<img th:src="@{/img/stockPhoto34.jpg}" align="left" alt="Therapist3" class="therapist3" width="270" height="175"/>
-				<p style="margin-left:400px;">Steven Stone<br> Registered Nurse <br> Alma Mater: Grand Canyon University<br><br> Email:steven.stone@aloehealth.com<br><br><br></p>
-			</div>
-			<div class="imgcontainer">
-		  		<img th:src="@{/img/stockPhoto35.jpg}" align="left" alt="Therapist3" class="therapist3" width="270" height="175"/>
-				<p style="margin-left:400px;">Octavia Smith<br> Registered Nurse <br> Alma Mater: Grand Canyon University <br><br> Email:octavia.smith@aloehealth.com<br><br><br></p>
-			</div>
-		</div>
-		<script>
-var coll = document.getElementsByClassName("collapsible");
-var i;
-
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.maxHeight){
-      content.style.maxHeight = null;
-    } else {
-      content.style.maxHeight = content.scrollHeight + "px";
-    } 
-  });
-}
-</script>
-<br><br><br>
 	</div>
 	</body>
 </html>

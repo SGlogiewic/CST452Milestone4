@@ -1,107 +1,37 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="layouts/defaultTemplate">
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <head>
 <style>
-.collapsible {
-  background-color: #777;
-  color: white;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: center;
-  outline: none;
-  font-size: 15px;
-}
-
-.collapsible:hover {
-  background-color: #555;
-}
-
-.content {
-  padding: 0 18px;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
-  text-align: left;
-  background-color: #f1f1f1;
-}
 	* {
 		font-family: Arial;
 	}
-	h1{
-		text-align:left;
-		font-size:xx-large;
-	}
 	h2 {
-		text-align:left;
-		font-size:large;
-		color:gray;
+		color:blue;
 	}
 	p {
 		font-style : italic;
+		font-size:xx-large;
 	}
 	table, th, td {
   		border: 1px solid black; 
   		border-collapse: collapse;
 		padding:2px;
 		} 
-	
 </style>
 
 
 </head>
 	<body>
 	<div layout:fragment="content" class="container-xl">
-		<h1 size="5">Ways to contact Aloe Health<br></h1>
-      	
-      	<h2 size="2">At Aloe Health we believe that transparency and open-communication are vital to providing you with the best medical care. We are open to questions and the departments of our medical facility will reply to any inquiries in a timely manner. </h2>
-      	<button class="collapsible" >Reception Desk</button>
-    <div class="content">
-      	<p>Calls can be made to the reception desk to inquire about any general questions regarding Aloe Health.<br> Reception number: 123-456-7890<br> Additionally, the help desk also has a representative that will respond to inquiries via email at:<br>aloehelp@aloehealth.com</p>
-	</div>
-		<button class="collapsible">Hospital Administration</button>
-	<div class="content">
-		<p>Hospital administration can only be contacted via email. All email inquiries will be answered within 1-4 business days.<br>aloeadministration@aloehealth.com</p>
-	</div>
-		<button class="collapsible">Medical Billing and Finance Deprtment</button>
-	<div class="content">
-		<p>The medical billing and finance department can be contacted with inquiries regarding bill payments, medical bill payment plans, and any potential errors appearing on bills.<br> phone: 098-765-4321 <br> email: aloefinance@aloehealth.com</p>
-	</div>
-		<button class="collapsible">Medical Staff</button>
-	<div class="content">
-		<p>Refer to the website's medical staff page for contact information for all medical staff.</p>
-	</div>
-		
-<script>
-var coll = document.getElementsByClassName("collapsible");
-var i;
-
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.maxHeight){
-      content.style.maxHeight = null;
-    } else {
-      content.style.maxHeight = content.scrollHeight + "px";
-    } 
-  });
-}
-</script>
-      	
-      	<div class="imgcontainer" style = "position:relative; left:380px; top:00px;">
-		  	<img th:src="@{/img/stockPhoto1.jpg}" alt="photo1" class="photo1" width="350" height="270"/>
+		<font size="6">This page is unavailable</font>
+      	<div class="imgcontainer">
+		  	<img th:src="@{/img/stockPhoto38.jpg}" align="left" alt="photo1" class="photo1" width="500" height="400"/>
+		  	<p style="margin-left:400px;">
+		  	<br><br><br><br>This page is currently under construction<br><br><br><br>
+		  	</p>
 		</div>
-		<div class="imgcontainer" style = "position:relative; left:0px; top:-270px;">
-		  	<img th:src="@{/img/stockPhoto2.jpg}" alt="photo1" class="photo1" width="350" height="270"/>
-		</div>
-		<div class="imgcontainer" style = "position:relative; left:-380px; top:-540px;">
-		  	<img th:src="@{/img/stockPhoto3.jpg}" alt="photo1" class="photo1" width="350" height="270"/>
-		</div>
-		</font>
 	</div>
 	</body>
-</html>
+</html> 
